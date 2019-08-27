@@ -25,7 +25,7 @@ public class GuessInputCommand {
        // String[] answer = {"1","2","3","4"};
         int countA=0,countB=0;
         List<String > answerList = Arrays.asList(answer.split(""));
-        List<String > inputList = Arrays.asList(input.split(" "));
+        List<String > inputList = Arrays.asList(input.split(""));
         for(String number:inputList){
             //统计相同的数字
             if(answerList.contains(number)){

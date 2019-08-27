@@ -3,6 +3,7 @@ package example;/*
  */
 
 import org.junit.jupiter.api.*;
+import tw.commands.GuessInputCommand;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -85,5 +86,38 @@ class LibraryTest {
             // Simulate task that takes more than 10 ms.
             Thread.sleep(100);
         });
+    }
+    @Test
+    public void should_print_1A0B_when_input_1567() {
+        //given
+        String  input = "1567";
+        String answer = "1234";
+        //when
+        GuessInputCommand guessInputCommand = new GuessInputCommand();
+        String banckImange = guessInputCommand.guessNumber(input,answer);
+        //then
+        assertEquals("1A0B",banckImange);
+    }
+    @Test
+    public void should_print_1A1B_when_input_1547() {
+        //given
+        String  input = "1547";
+        String answer = "1234";
+        //when
+        GuessInputCommand guessInputCommand = new GuessInputCommand();
+        String banckImange = guessInputCommand.guessNumber(input,answer);
+        //then
+        assertEquals("1A1B",banckImange);
+    }
+    @Test
+    public void should_print_2A0B_when_input_1537() {
+        //given
+        String  input = "1537";
+        String answer = "1234";
+        //when
+        GuessInputCommand guessInputCommand = new GuessInputCommand();
+        String banckImange = guessInputCommand.guessNumber(input,answer);
+        //then
+        assertEquals("2A0B",banckImange);
     }
 }
